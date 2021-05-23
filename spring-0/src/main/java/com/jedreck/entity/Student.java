@@ -7,6 +7,7 @@ public class Student {
     private Integer id;
     private String name;
     private Integer age;
+    private Classes classes;
 
     public Student(){
         System.out.println("无参构造");

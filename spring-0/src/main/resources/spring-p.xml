@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userP" class="com.jedreck.entity.User" p:id="1" p:name="张三"/>
+    <bean id="userP2" class="com.jedreck.entity.User" p:name="李四" parent="userP"/>
+
+    <bean id="classesP" class="com.jedreck.entity.Classes" p:id="1" p:name="一班">
+    </bean>
+    <bean id="studentP" class="com.jedreck.entity.Student" p:classes-ref="classesP">
+        <property name="id" value="111"/>
+        <property name="age" value="222"/>
+        <property name="name" value="张三"/>
+    </bean>
+</beans>

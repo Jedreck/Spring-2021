@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userE1" class="com.jedreck.entity.User">
+        <property name="id" value="1"/>
+        <property name="name" value="张三"/>
+    </bean>
+    <bean id="userE2" class="com.jedreck.entity.User" parent="userE1">
+        <property name="name" value="李四"/>
+    </bean>
+
+    <bean id="account" class="com.jedreck.entity.Account" parent="userE1"/>
+</beans>

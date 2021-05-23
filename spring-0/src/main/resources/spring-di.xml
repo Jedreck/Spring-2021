@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="classes" class="com.jedreck.entity.Classes">
+        <property name="id" value="1"/>
+        <property name="name">
+            <value><![CDATA[<一班>]]></value>
+        </property>
+        <!--数组设置-->
+        <property name="list">
+            <list>
+                <value>0</value>
+                <value>1</value>
+                <value>2</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="student" class="com.jedreck.entity.Student">
+        <property name="id" value="111"/>
+        <property name="age" value="222"/>
+        <property name="name" value="张三"/>
+        <property name="classes" ref="classes"/>
+    </bean>
+</beans>

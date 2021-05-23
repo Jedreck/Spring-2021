@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--加上 depends-on 会优先注入 依赖的 bean-->
+    <bean id="userD1" class="com.jedreck.entity.User" depends-on="accountD1"/>
+
+    <bean id="accountD1" class="com.jedreck.entity.Account"/>
+
+
+</beans>
