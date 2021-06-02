@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--静态工厂-->
+    <bean id="car1" class="com.jedreck.factory.StaticCarFactory" factory-method="getCar">
+        <constructor-arg value="1"/>
+    </bean>
+
+    <!--实例工厂-->
+    <bean id="instanceCarFactory" class="com.jedreck.factory.InstanceCarFactory"/>
+    <!-- 通过实例⼯⼚获取Car -->
+    <bean id="car2" factory-bean="instanceCarFactory" factory-method="getCar">
+        <constructor-arg value="2"/>
+    </bean>
+
+</beans>

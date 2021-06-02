@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="com.jedreck.entity.Person" autowire="byName">
+        <property name="id" value="1"/>
+        <property name="name" value="张三"/>
+    </bean>
+    <bean id="person2" class="com.jedreck.entity.Person" autowire="byType">
+        <property name="id" value="2"/>
+        <property name="name" value="李四"/>
+    </bean>
+    <bean id="car" class="com.jedreck.entity.Car">
+        <constructor-arg name="num" value="1"/>
+        <constructor-arg name="brand" value="奥迪"/>
+    </bean>
+</beans>
