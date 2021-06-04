@@ -1,6 +1,7 @@
 server:
   port: 50080
 
+# dashboard-2
 project:
   name: ${spring.application.name}
 
@@ -9,16 +10,10 @@ spring:
     name: test-sentinel-01
   cloud:
     sentinel:
+      # dashboard-1
       transport:
         dashboard: localhost:50089
         port: 8791
-
-#csp:
-#  sentinel:
-#    dashboard:
-#      server: localhost:50089
-#    api:
-#      port: 50082
 
 knife4j:
   enable: true
